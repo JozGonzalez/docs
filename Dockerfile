@@ -12,7 +12,7 @@ WORKDIR /app
 RUN npm install
 RUN npm run build
 
-FROM nginx:latest
+FROM nginx:1-bullseye
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 COPY build/server.conf /etc/nginx/conf.d/default.conf
